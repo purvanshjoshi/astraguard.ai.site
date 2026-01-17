@@ -1,3 +1,4 @@
+
 ## 🚀 Mission Control Dashboard MVP
 
 [![Lighthouse](https://img.shields.io/badge/Lighthouse-95%2B-green.svg)](reports/)
