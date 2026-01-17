@@ -24,7 +24,7 @@ import ContinentScene from './scenes/Continent/ContinentScene';
 import CityScene from './scenes/City/CityScene';
 import DistrictScene from './scenes/District/DistrictScene';
 
-// import RoomScene from './scenes/Room/RoomScene';
+
 
 function AppContent() {
     const { currentScene, loadingProgress } = useSceneStore();
@@ -67,7 +67,7 @@ function AppContent() {
                         {currentScene === 'continent' && <ContinentScene />}
                         {currentScene === 'city' && <CityScene />}
                         {currentScene === 'district' && <DistrictScene />}
-                        {/* Room scene removed */}
+
                     </>
                 </Suspense>
 

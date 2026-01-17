@@ -13,7 +13,7 @@ import SolarSystemScene from '../scenes/SolarSystem/SolarSystemScene';
 import ContinentScene from '../scenes/Continent/ContinentScene';
 import CityScene from '../scenes/City/CityScene';
 import DistrictScene from '../scenes/District/DistrictScene';
-// import RoomScene from '../scenes/Room/RoomScene';
+
 
 export function AssetManager() {
   const { gl, camera } = useThree();
@@ -28,7 +28,7 @@ export function AssetManager() {
     <ContinentScene />,
     <CityScene />,
     <DistrictScene />,
-    // <RoomScene />,
+
   ];
 
   const totalAssets = useMemo(() => {

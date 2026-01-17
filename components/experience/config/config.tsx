@@ -275,19 +275,5 @@ export const IMAGE_SCENE = {
     }
 }
 
-// Room
-export const ROOM = {
-    ZOOMED_OUT_CAMERA_POS: new Vector3(6.92, 4.5, 6.5) // initial room camera position when loaded and/or zoomed out
-}
 
-// Device
-export const DEVICE = {
-    MONITOR: {
-        POSITION_OFFSET: new Vector3(-1, 2.588, -.1), // offset for monitor position (relative to desk)
-        CAMERA_OFFSET: new Vector3(1.5, 0, 0) // offset to center the monitor screen on the camera when zoomed in
-    },
-    PHONE: {
-        POSITION_OFFSET: new Vector3(.2, 2.61, 1.8), // offset for phone position (relative to desk)
-        CAMERA_OFFSET: new Vector3(0.05, -.6, 0) // offset to center the phone screen on the camera when zoomed in
-    }
-}
+
