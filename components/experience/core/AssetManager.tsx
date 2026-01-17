@@ -5,7 +5,7 @@ import { useThree } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import { SCENE_MANAGER } from '../config/config';
 import React from 'react';
-import { ScenePrecompiler } from './ScenePrecompiler';
+// import { ScenePrecompiler } from './ScenePrecompiler';
 
 // scenes
 import GalaxyScene from '../scenes/Galaxy/GalaxyScene';
@@ -20,7 +20,7 @@ export function AssetManager() {
   const { loadingProgress, setLoadingProgress, setLoadingText } = useSceneStore();
 
   const [loadedCount, setLoadedCount] = useState(0);
-  const [assetsLoaded, setAssetsLoaded] = useState(false);
+  // const [assetsLoaded, setAssetsLoaded] = useState(false);
 
   const precompileScenes = [
     <GalaxyScene />,
@@ -56,7 +56,7 @@ export function AssetManager() {
 
   // update loaded count
   const updateProgress = useCallback(() => {
-    setLoadedCount(prevCount => prevCount + 1);
+    setLoadedCount((prevCount: number) => prevCount + 1);
   }, [totalAssets]);
 
   // update loading progress text
@@ -121,7 +121,7 @@ export function AssetManager() {
           new Promise((resolve, reject) => {
             textureLoader.load(
               path,
-              (texture) => {
+              (texture: any) => {
                 setLoadingText(`Loading textures...`);
 
                 console.debug(`Texture loaded: ${path}`);
@@ -134,7 +134,7 @@ export function AssetManager() {
                 resolve(texture);
               },
               undefined,
-              (error) => {
+              (error: any) => {
                 console.error(`Error loading texture ${path}:`, error);
 
                 reject(error);
@@ -171,7 +171,7 @@ export function AssetManager() {
               resolve(img);
             };
 
-            img.onerror = (error) => {
+            img.onerror = (error: any) => {
               console.error(`Error loading icon ${path}:`, error);
               updateProgress();
               reject(error);
@@ -193,7 +193,7 @@ export function AssetManager() {
       await Promise.all([preloadModels(), preloadTextures(), preloadIcons()]);
       console.debug('Assets preloading complete.');
 
-      setAssetsLoaded(true);
+      // setAssetsLoaded(true);
 
       setLoadingText(`Precompiling scenes...`);
     };
